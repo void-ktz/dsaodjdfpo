@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Imersivo - Site Moderno</title>
+  <style>
+    /* Reset básico para garantir consistência em todos os navegadores */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav .nav-links {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    nav .social-media a {
+      color: white;
+      margin-left: 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: linear-gradient(45deg, #0066ff, #ff6699);
+      color: white;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .cta-button {
+      background-color: #ff6699;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #ff3366;
+      transition: 0.3s;
+    }
+
+    .services {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .service-card {
+      background-color: #f0f0f0;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form {
+      padding: 40px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .contact-form form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: #0066ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact-form button:hover {
+      background-color: #0044cc;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Minha Marca</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bem-vindo ao nosso site</h1>
+      <p>Design inovador e interativo. Explore a modernidade.</p>
+      <a href="#servicos" class="cta-button">Explore</a>
+    </div>
+  </section>
+
+  <section id="servicos" class="services">
+    <h2>Nosso Serviço</h2>
+    <div class="service-card">
+      <h3>Design Personalizado</h3>
+      <p>Criação de designs modernos e intuitivos.</p>
+    </div>
+    <div class="service-card">
+      <h3>Desenvolvimento Web</h3>
+      <p>Sites rápidos, responsivos e funcionais.</p>
+    </div>
+    <div class="service-card">
+      <h3>Consultoria Digital</h3>
+      <p>Consultoria para otimização e marketing digital.</p>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Fale Conosco</h2>
+    <form id="contactForm">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Minha Marca. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Animações de navegação suave (scroll)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animação de hover nos cards de serviço
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    serviceCards.forEach(card => {
+      card.addEventListener('mouseover', () => {
+        card.style.transform = "scale(1.05)";
+        card.style.boxShadow = "0 15px 25px rgba(0, 0, 0, 0.15)";
+      });
+      card.addEventListener('mouseout', () => {
+        card.style.transform = "scale(1)";
+        card.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 0.1)";
+      });
+    });
+
+    // Script para processar o envio do formulário de contato
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o envio real do formulário
+
+      // Coleta os valores dos campos
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Simula o envio do formulário
+      alert(`Formulário enviado!\n\nNome: ${name}\nE-mail: ${email}\nMensagem: ${message}`);
+
+      // Limpa os campos após o envio (simulação)
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
